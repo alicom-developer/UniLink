@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ramani ya Chuo</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-red">
+  <header class="top-nav">
+    <a class="tab" href="education.html">EDUCATION</a>
+    <a class="tab" href="marketplace.html">MARKETPLACE</a>
+    <a class="tab active">RAMANI YA CHUO</a>
+    <button class="icon-btn" aria-label="Notifications">🔔</button>
+  </header>
+
+  <main class="container">
+    <h1 class="title">Ramani ya Chuo</h1>
+
+    <div class="search-row">
+      <input class="search" type="text" id="mapSearch" placeholder="Tafuta jengo..." />
+      <button class="btn btn-yellow" onclick="searchMap()">Search</button>
+    </div>
+
+    <div class="filters">
+      <button class="chip chip-blue" onclick="filterMap('Masomo')">MASOMO</button>
+      <button class="chip chip-green" onclick="filterMap('Huduma')">HUDUMA</button>
+      <button class="chip chip-yellow" onclick="filterMap('Burudani')">BURUDANI</button>
+      <button class="chip chip-dark" onclick="filterMap('Ofisi')">OFISI</button>
+    </div>
+
+    <!-- Simple interactive placeholder map -->
+    <section class="map-box">
+      <div class="map-grid">
+        <button class="map-cell" onclick="showBuilding('Library','Masomo')">Library</button>
+        <button class="map-cell" onclick="showBuilding('Main Hall','Ofisi')">Main Hall</button>
+        <button class="map-cell" onclick="showBuilding('Cafeteria','Huduma')">Cafeteria</button>
+        <button class="map-cell" onclick="showBuilding('Sports Ground','Burudani')">Sports Ground</button>
+        <button class="map-cell" onclick="showBuilding('ICT Lab','Masomo')">ICT Lab</button>
+        <button class="map-cell" onclick="showBuilding('Admissions','Ofisi')">Admissions</button>
+      </div>
+    </section>
+
+    <div id="mapInfo" class="banner banner-blue hidden"></div>
+  </main>
+
+  <footer class="bottom-nav">
+    <a class="btn btn-yellow" href="index.html">GLOBAL CHAT</a>
+    <a class="btn btn-dark" href="marketplace.html">MARKETPLACE</a>
+    <a class="btn btn-green" href="education.html">EDUCATION</a>
+  </footer>
+</body>
+</html>
