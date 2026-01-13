@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Education</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-red" onload="initEducation()">
+  <!-- Top tabs -->
+  <header class="top-nav">
+    <a class="tab active">NEWS</a>
+    <a class="tab">NOTES</a>
+    <a class="tab">ASSIGNMENTS</a>
+    <span class="tag tag-blue" id="groupTag">Course: — | Year: —</span>
+  </header>
+
+  <main class="container">
+    <h1 class="title">Academic Group</h1>
+
+    <!-- Admin-only uploads to the top tabs -->
+    <section class="admin-upload">
+      <h3>Admin uploads (class rep only)</h3>
+      <form onsubmit="adminUpload(event)">
+        <input type="text" id="adminTitle" placeholder="Title..." required />
+        <input type="file" id="adminFile" />
+        <button class="btn btn-dark" type="submit">Upload to NEWS/NOTES/ASSIGNMENTS</button>
+      </form>
+      <p class="hint">Only admin can post images/files to the top tabs. Group chat below is text-only.</p>
+    </section>
+
+    <!-- Text-only group chat -->
+    <section class="chat-box bg-blue">
+      <ul class="chat-list" id="eduChat">
+        <li class="msg msg-left">
+          <div class="avatar">S</div>
+          <div class="bubble bubble-blue">
+            <div class="meta">Student • 10:02</div>
+            <div class="text">Anyone has past papers for CS101?</div>
+          </div>
+        </li>
+        <li class="msg msg-right">
+          <div class="bubble bubble-yellow">
+            <div class="meta">Peer • 10:04</div>
+            <div class="text">Check the NOTES tab later today.</div>
+          </div>
+          <div class="avatar">P</div>
+        </li>
+      </ul>
+
+      <form class="chat-input" onsubmit="sendEduChat(event)">
+        <input type="text" id="eduInput" placeholder="Andika ujumbe (text-only)..." />
+        <button class="btn btn-green" type="submit">SEND</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="bottom-nav">
+    <a class="btn btn-yellow" href="index.html">GLOBAL CHAT</a>
+    <a class="btn btn-dark" href="marketplace.html">MARKETPLACE</a>
+    <a class="btn btn-green" href="map.html">RAMANI YA CHUO</a>
+  </footer>
+</body>
+</html>
