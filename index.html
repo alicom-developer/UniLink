@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>KIUT Global Chat</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-red">
+  <!-- Sticky top navigation -->
+  <header class="top-nav">
+    <a class="tab" href="education.html">EDUCATION</a>
+    <a class="tab" href="marketplace.html">MARKETPLACE</a>
+    <a class="tab" href="map.html">RAMANI YA CHUO</a>
+    <button class="icon-btn" aria-label="Notifications">🔔</button>
+  </header>
+
+  <main class="container">
+    <h1 class="title">KIUT GLOBAL CHAT</h1>
+
+    <!-- Announcements banner (official student gov) -->
+    <div class="banner banner-green">
+      <strong>ANNOUNCEMENT:</strong> ID cards distribution Friday at Administration Hall. Concert on Saturday!
+    </div>
+
+    <!-- Chat window -->
+    <section class="chat-box bg-blue">
+      <ul class="chat-list">
+        <li class="msg msg-left">
+          <div class="avatar">R</div>
+          <div class="bubble bubble-blue">
+            <div class="meta">Rachel • 14:05</div>
+            <div class="text">Anyone interested in forming a study group?</div>
+          </div>
+        </li>
+
+        <li class="msg msg-right">
+          <div class="bubble bubble-yellow">
+            <div class="meta">Peter • 14:07</div>
+            <div class="text">Yes, that is a good idea!</div>
+          </div>
+          <div class="avatar">P</div>
+        </li>
+
+        <li class="msg msg-left">
+          <div class="avatar">A</div>
+          <div class="bubble bubble-blue">
+            <div class="meta">Ann • 14:10</div>
+            <div class="text">Where is the library located?</div>
+          </div>
+        </li>
+
+        <li class="msg msg-right">
+          <div class="bubble bubble-yellow">
+            <div class="meta">David • 14:12</div>
+            <div class="text">Near the main entrance.</div>
+          </div>
+          <div class="avatar">D</div>
+        </li>
+      </ul>
+
+      <form class="chat-input" onsubmit="sendChat(event)">
+        <input type="text" id="globalInput" placeholder="Andika ujumbe..." />
+        <button type="submit" class="btn btn-green">SEND</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Bottom sticky quick nav -->
+  <footer class="bottom-nav">
+    <a class="btn btn-dark" href="education.html">EDUCATION</a>
+    <a class="btn btn-yellow" href="marketplace.html">MARKETPLACE</a>
+    <a class="btn btn-green" href="map.html">RAMANI YA CHUO</a>
+  </footer>
+</body>
+</html>
