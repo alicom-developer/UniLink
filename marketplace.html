@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body class="bg-red">
+  <header class="top-nav">
+    <a class="tab active">HOSTEL</a>
+    <a class="tab">MIGAHAWA</a>
+    <a class="tab">STATIONARIES</a>
+    <a class="tab tab-plus" href="#" onclick="openBoomPlus()">BOOM PLUS</a>
+    <button class="icon-btn" aria-label="Notifications">🔔</button>
+  </header>
+
+  <main class="container">
+    <h1 class="title">MARKETPLACE</h1>
+
+    <div class="search-row">
+      <input class="search" type="text" placeholder="Tafuta bidhaa..." />
+      <button class="btn btn-yellow">Search</button>
+    </div>
+
+    <!-- 3-column grid -->
+    <section class="grid-3">
+      <article class="card bg-yellow">
+        <h3 class="card-title">TEXTBOOK FOR SALE</h3>
+        <p class="price">TZS 15,000</p>
+        <button class="btn btn-dark">View</button>
+      </article>
+
+      <article class="card bg-green">
+        <h3 class="card-title">LAPTOP FOR SALE</h3>
+        <p class="price">TZS 600,000</p>
+        <button class="btn btn-dark">View</button>
+      </article>
+
+      <article class="card bg-blue">
+        <h3 class="card-title">HOSTEL SUPPLIES</h3>
+        <p class="price">TZS 10,000</p>
+        <button class="btn btn-dark">View</button>
+      </article>
+
+      <article class="card bg-yellow">
+        <h3 class="card-title">GRAPHING CALCULATOR</h3>
+        <p class="price">TZS 35,000</p>
+        <button class="btn btn-dark">View</button>
+      </article>
+
+      <article class="card bg-green">
+        <h3 class="card-title">NOTEBOOK PACK</h3>
+        <p class="price">TZS 7,500</p>
+        <button class="btn btn-dark">View</button>
+      </article>
+
+      <article class="card bg-blue">
+        <h3 class="card-title">DESK LAMP</h3>
+        <p class="price">TZS 20,000</p>
+        <button class="btn btn-dark">View</button>
+      </article>
+    </section>
+
+    <!-- Boom Plus modal (ad + points) -->
+    <div id="boomPlus" class="modal hidden">
+      <div class="modal-body">
+        <h2>BOOM PLUS</h2>
+        <p>Watch official ads and earn points. 1 ad = 200 points (redeem for cash).</p>
+        <button class="btn btn-green" onclick="earnPoints()">View Ad – Earn 200</button>
+        <p id="pointsText" class="mt-8">Points: 0</p>
+        <button class="btn btn-dark mt-8" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <!-- Footer post section -->
+    <section class="post-footer">
+      <h3>Post a new listing</h3>
+      <form class="post-form" onsubmit="postListing(event)">
+        <input type="text" placeholder="Jina la bidhaa..." required />
+        <input type="number" placeholder="Bei (TZS)..." required />
+        <select required>
+          <option value="">Chagua category</option>
+          <option>Hostel</option>
+          <option>Migahawa</option>
+          <option>Stationaries</option>
+        </select>
+        <button class="btn btn-yellow" type="submit">POST LISTING</button>
+      </form>
+      <p id="postMsg" class="mt-8"></p>
+    </section>
+  </main>
+
+  <footer class="bottom-nav">
+    <a class="btn btn-dark" href="education.html">EDUCATION</a>
+    <a class="btn btn-yellow" href="index.html">GLOBAL CHAT</a>
+    <a class="btn btn-green" href="map.html">RAMANI YA CHUO</a>
+  </footer>
+</body>
+</html>
