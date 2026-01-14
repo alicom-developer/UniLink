@@ -1,3 +1,6 @@
+const SUPABASE_URL = "https://https://mkmadrkqlzboaudjahqg.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1rbWFkcmtxbHpib2F1ZGphaHFnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgzMjI2MzYsImV4cCI6MjA4Mzg5ODYzNn0.m6CpYuQphtEKnNIIvTdZtJtdX7CUZCVPx1Ttp-btMwg";
+const supabase = supabase.createClient(https://mkmadrkqlzboaudjahqg.supabase.co, eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im1rbWFkcmtxbHpib2F1ZGphaHFnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjgzMjI2MzYsImV4cCI6MjA4Mzg5ODYzNn0.m6CpYuQphtEKnNIIvTdZtJtdX7CUZCVPx1Ttp-btMwg);
 // Global Chat
 function sendChat(e){
   e.preventDefault();
